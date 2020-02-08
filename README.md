@@ -5,10 +5,8 @@ This repository contains pytorch source code for AAAI2020 oral paper: [Grapy-ML:
 * * *
 ## Grapy-ML:
 
-![GPM](https://github.com/Charleshhy/Grapy-ML/images/2317-Figure2.pdf)
+![GPM](images/2317-Figure2.jpg?raw=true "Title")
 
-
-![Grapy-ML](https://github.com/Charleshhy/Grapy-ML/images/2317-Figure3.pdf)
 * * *
 
 ## Getting Started:
