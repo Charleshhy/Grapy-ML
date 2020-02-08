@@ -1,0 +1,13 @@
+python ./exp/refine_on_datasets_SYN/train_gpm_ml.py \
+ --batch 4 \
+ --gpus 1 \
+ --loadmodel ./data/models/dlab_multi-dataset.pth \
+ --lr 0.0007 \
+ --numworker 6 \
+ --testInterval 10 \
+ --hidden_graph_layers 256 \
+ --epochs 100 \
+ --beta_aux 1.0 \
+ --beta_main 1.0 \
+ --train_mode cihp_pascal_atr \
+ --classes 18

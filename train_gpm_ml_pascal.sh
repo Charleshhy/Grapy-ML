@@ -1,0 +1,13 @@
+python ./exp/refine_on_datasets_SYN/train_gpm_ml.py \
+ --batch 10 \
+ --gpus 2 \
+ --resume_model ./data/models/GPM-ML_multi-dataset.pth \
+ --lr 0.0007 \
+ --numworker 6 \
+ --testInterval 10 \
+ --hidden_graph_layers 256 \
+ --epochs 100 \
+ --beta_aux 1.0 \
+ --beta_main 1.0 \
+ --train_mode pascal \
+ --classes 7
