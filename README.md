@@ -36,12 +36,23 @@ Then, the datasets should be arranged in the following folder, and images should
     
 ### Testing:
 
+
+The pretrain models and some trained models are provided [here](https://drive.google.com/drive/folders/1eQ9IV4QmcM5dLCuVMSVE3ogVpL6qUQL5?usp=sharing) for testing and training.
+
+| Model Name        | Purpose           | Result |
+| :-------------: |:-------------:|:-------:|
+| deeplab_v3plus_v3.pth      | Train the model with raw prediction | CIHP_pretrain.pth |
+| CIHP_pretrain.pth      | Train the Final GPM model       | CIHP_trained.pth |
+| CIHP_trained.pth | CIHP evaluation      |  |
+| deeplab_multi-dataset.pth | Train the model with raw multi-dataset prediction  | GPM-ML_multi-dataset.pth |
+| GPM-ML_multi-dataset.pth | Train the Final Grapy-ML model  | GPM-ML_finetune_PASCAL.pth |
+| GPM-ML_finetune_PASCAL.pth | PASCAL evaluation      |  |
+
 To test, run the following two scripts:
     
     bash eval_gpm.sh
     bash eval_gpm_ml.sh
-    
-The trained models for three datasets are available here:
+
 
 ### Training:
 
@@ -49,7 +60,7 @@ The trained models for three datasets are available here:
 During training, you first need to get the Deeplab pretrain model(e.g. CIHP_dlab.pth) on each dataset. Such act aims to provide a trustworthy initial raw result for the GSA operation in GPM.
    
     bash train_dlab.sh
-The imageNet pretrain model is provided here, and you should swith the dataset name and target classes to the dataset you want in the script. (CIHP: 20 classes, PASCAL: 7 classes and ATR: 18 classes)
+The imageNet pretrain model is provided in the following table, and you should swith the dataset name and target classes to the dataset you want in the script. (CIHP: 20 classes, PASCAL: 7 classes and ATR: 18 classes)
 
 In the next step, you should utilize the Deeplab pretrain model to further train the GPM model.
 
@@ -57,7 +68,7 @@ In the next step, you should utilize the Deeplab pretrain model to further train
 
 It is recommended to follow the training settings in our paper to reproduce the results.
 
-The Deeplab pretrain model are provided [here](https://drive.google.com/drive/folders/1eQ9IV4QmcM5dLCuVMSVE3ogVpL6qUQL5?usp=sharing).
+
 
 #### GPM-ML: 
   
