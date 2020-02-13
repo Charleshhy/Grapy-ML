@@ -39,14 +39,15 @@ Then, the datasets should be arranged in the following folder, and images should
 
 The pretrain models and some trained models are provided [here](https://drive.google.com/drive/folders/1eQ9IV4QmcM5dLCuVMSVE3ogVpL6qUQL5?usp=sharing) for testing and training.
 
-| Model Name        | Purpose           | Result |
-| :-------------: |:-------------:|:-------:|
-| deeplab_v3plus_v3.pth      | Train the model with raw prediction | CIHP_pretrain.pth |
-| CIHP_pretrain.pth      | Train the Final GPM model       | CIHP_trained.pth |
-| CIHP_trained.pth | CIHP evaluation      |  |
-| deeplab_multi-dataset.pth | Train the model with raw multi-dataset prediction  | GPM-ML_multi-dataset.pth |
-| GPM-ML_multi-dataset.pth | Train the Final Grapy-ML model  | GPM-ML_finetune_PASCAL.pth |
-| GPM-ML_finetune_PASCAL.pth | PASCAL evaluation      |  |
+| Model Name        | Description           | Derived from |
+| :-------------: |:-------------:|:-------------:|
+| deeplab_v3plus_v3.pth      | The Deeplab v3+'s pretrain weights | |
+| CIHP_pretrain.pth      |  The reproduced Deeplab v3+ model trained on CIHP dataset  | deeplab_v3plus_v3.pth |
+| CIHP_trained.pth | GPM model trained on CIHP dataset    | CIHP_pretrain.pth |
+| deeplab_multi-dataset.pth | The reproduced multi-task learning Deeplab v3+ model trained on CIHP, PASCAL-Person-Part and ATR dataset | deeplab_v3plus_v3.pth |
+| GPM-ML_multi-dataset.pth | Grapy-ML model trained on CIHP, PASCAL-Person-Part and ATR dataset | deeplab_multi-dataset.pth |
+| GPM-ML_finetune_PASCAL.pth | Grapy-ML model finetuned on PASCAL-Person-Part dataset | GPM-ML_multi-dataset.pth |
+
 
 To test, run the following two scripts:
     
@@ -88,7 +89,12 @@ Finally, you can try to finetune on each dataset by the unified pretrain model.
     
 ### Citation:
 
-He, H., Zhang, J., Zhang, Q., Tao, D. (2020). Grapy-ML: Graph Pyramid Mutual Learning for Cross-dataset Human Parsing. The Thirty-Fourth AAAI Conference on Artificial Intelligence (AAAI-2020), Palo Alto, USA: AAAI Press.
+    @inproceedings{he2020grapy,
+    title={Grapy-ML: Graph Pyramid Mutual Learning for Cross-dataset Human Parsing},
+    author={Haoyu He, Jing Zhang, Qiming Zhang and Dacheng Tao},
+    booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+    year={2020}
+    }
     
 ### Maintainer:
 haoyu.he@sydney.edu.au
