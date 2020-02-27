@@ -1,6 +1,6 @@
 python ./exp/refine_on_datasets_SYN/train_gpm_ml.py \
- --batch 4 \
- --gpus 1 \
+ --batch 10 \
+ --gpus 2 \
  --loadmodel ./data/models/dlab_multi-dataset.pth \
  --lr 0.0007 \
  --numworker 6 \
