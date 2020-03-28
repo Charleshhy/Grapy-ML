@@ -91,7 +91,7 @@ Finally, you can try to finetune on each dataset by the unified pretrain model.
 
     @inproceedings{he2020grapy,
     title={Grapy-ML: Graph Pyramid Mutual Learning for Cross-dataset Human Parsing},
-    author={Haoyu He, Jing Zhang, Qiming Zhang and Dacheng Tao},
+    author={He, Haoyu and Zhang, Jing and Zhang, Qiming and Tao, Dacheng},
     booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
     year={2020}
     }
